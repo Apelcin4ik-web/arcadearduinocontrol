@@ -178,12 +178,12 @@ if (millis() - tmr1 >= 3000) {  // ищем разницу
 void send_data ()
 {
   WiFiClient client;
-  if (!client.connect("188.43.118.17", 90)) \
+  if (!client.connect("188.53.138.27", 90)) \
   {
     Serial.println("connection failed");
     return;
   }
-  String host = "188.43.118.17:90";
+  String host = "188.53.138.27:90";
   String url = "/igra/post-data.php?";
   url += "game=";
   url += "1";
@@ -199,12 +199,12 @@ void send_data ()
 void today_data ()
 {
   WiFiClient client;
-  if (!client.connect("188.43.118.17", 90)) \
+  if (!client.connect("188.53.138.27", 90)) \
   {
     Serial.println("connection failed");
     return;
   }
-  String host = "188.43.118.17:90";
+  String host = "188.53.138.27:90";
   String url = "/igra/query-data.php";
 
   client.print(String("GET ") + url + " HTTP/1.1\r\n" +
